@@ -3,9 +3,12 @@ import React from 'react'
 const TitleBar = (props) => {
    return (
 
-   <div id='titleBar'>
+   <div className='titleBar'>
       <h1>Top 51 Artists</h1>
-      <button id='gButton'>{props.gButton}</button>
+      <div className='genreUI'>
+         <p>Filter by Genre:</p>
+         <button id='genreButton'>{props.currentGenre}</button>
+      </div>
    </div> 
 
    )  
