@@ -1,11 +1,15 @@
 import './App.css'
+import TitleBar from './components/TitleBar'
+
+let gFilter = 'All'
 
 const App = () => {
 
   return (
-    <div>
-      "Top-51 Project"
+    <div className='header'>
+      <TitleBar gButton={gFilter} />
     </div>
+
   )
 }
 
