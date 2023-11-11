@@ -1,34 +1,34 @@
+import { useState } from 'react'
 import './App.css'
 import ArtistCard from './components/ArtistCard.jsx'
-import PickGenre from './components/PickGenre.jsx'
-import PickGenre from './components/PickGenre.jsx'
+import GenreUpdate from './components/GenreUpdate.jsx'
 import TitleBar from './components/TitleBar.jsx'
-import UpdateCurrentList from './components/UpdateCurrentList.jsx'
+import UpdateListDisplay from './components/UpdateListDisplay.jsx'
+
 import artistMasterData from "./top51artists.json"
 
-const genreIndex = 0
-const genreFilter = 'All'
-const currentList = []
+const recCount=artistMasterData.length
+const currentGenre = 'All'
+const workingList = []
 
 const App = () => {
 
-
-
-
-<PickGenre genreFilter={genreFilter} />
-
+  <GenreUpdate />
 
   return (
     <>
       <div className='top-nav-bar'>
-        <TitleBar currentGenre={genreFilter} />
+        <TitleBar 
+          currentGenre={currentGenre} 
+          count={recCount}
+        />
       </div>
 
       <div className='list-update'>
-        <UpdateCurrentList
-          genre={genreFilter}
+        <UpdateListDisplay
+          genre={currentGenre}
           masterList={artistMasterData}
-          newList={currentList}
+          newList={workingList}
         />
       </div>
 
