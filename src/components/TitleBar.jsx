@@ -1,11 +1,42 @@
 import React from 'react'
+import App from '../App'
 import GenreUpdate from './GenreUpdate'
+import artistMasterData from "../top51artists.json"
+import HandleMenu from './HandleMenu'
 
 // PURPOSE:
 // Creates the Titlebar section at the top of the screen
-// Receives: props.currentGenre and props.count
+
+// Receives: props.genre and props.masterList
+
 
 const TitleBar = (props) => {
+
+   const workingList=[];
+   try {
+      var curGenre=(document.getElementById(`#dropdown`).value)
+      console.log(`TitleBar Result: `+result);
+      } 
+      catch (error) 
+      { 
+         var curGenre = "All"
+      }
+   
+   console.log(`before TitleBar: ` + workingList.length)
+   console.log(curGenre)
+
+   // create new array based on genre
+   artistMasterData.forEach((artist) => {
+      if ((artist.musicGenre.includes(curGenre)) || (curGenre == "All"))
+   { 
+      workingList.push(artist);
+   }
+   })
+
+   console.log(`after TitleBar: ` + workingList.length)
+   console.log(curGenre)
+
+
    return (
 
    <div className='titleBar'>
@@ -13,7 +44,7 @@ const TitleBar = (props) => {
       <div className='genreUI'>
          <p>Filter by Genre:</p>
          <form>
-            <select id="dropdown" onChange={GenreUpdate}>
+            <select id="dropdown" onChange={(e) => App(e.target.value)}>
                <option value="All" >All</option>
                <option value="Pop" >Pop</option>
                <option value="Rock" >Rock</option>
@@ -28,7 +59,7 @@ const TitleBar = (props) => {
             </select>
          </form>
          <div id='record-count'>
-            Count: {props.count}
+            Count: {workingList.length}
          </div>
       </div>
    </div> 

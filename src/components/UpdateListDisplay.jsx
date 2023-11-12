@@ -2,35 +2,49 @@ import React from 'react'
 import App from '../App.jsx'
 import TitleBar from './TitleBar.jsx'
 import GenreUpdate from './GenreUpdate.jsx'
+import artistMasterData from "../top51artists.json"
 
 
-// receives props.genre, masterList & newlist
+// receives props.genre & props.masterList
 
 // maps through artistMasterData
 // artists who match genre go to
 // ArtistCard.jsx for display
 // Then TitleBar updates record count?
 
+
+
 const UpdateListDisplay = (props) => {
 
-console.log(`before update: ` + props.newList.length)
+  const workingList=[];
+  const curGenre=props.genre
 
-props.masterList.forEach((artist) => {
-    if ((artist.musicGenre.includes(props.genre)) || (props.genre == "All"))
+  // const currentGenre=(document.getElementById(`#dropdown`).value)
+
+console.log(`before UpdList update: ` + workingList.length)
+console.log(`genre: ` + curGenre)
+
+   // create new array based on genre
+    artistMasterData.forEach((artist) => {
+      if ((artist.musicGenre.includes(curGenre)) || (curGenre == "All"))
   { 
-    props.newList.push(artist);
+    workingList.push(artist);
   }
-})
+  })
 
-console.log(`after update: ` + props.newList.length)
+console.log(`after UpdList update: ` + workingList.length)
+console.log(`genre: ` + curGenre)
 
 
   return (
 
+    // eventually this is where we would map
+    // over the array and use ArtistCard
+    
   <div id='upd-cur-list'>
     <p>Updated Current List</p>
-    <p>1st Entry: {props.newList[0].artistName}</p>
-    <p>Array size: {props.newList.length}</p>
+    <p>1st Entry: {workingList[0].artistName}</p>
+    <p>Array size: {workingList.length}</p>
   </div>
 
 )
