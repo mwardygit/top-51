@@ -1,18 +1,25 @@
 import React from 'react'
 import App from '../App.jsx'
 
-
+// Parent = UpdateListDisplay
+// This draws each artist 'card'
+// props: rank, type, genre, name,
+// sales, photo, gNods, gWins
 
 const ArtistCard = (props) => {
 
-   // console.log(currentList)
-   console.log('anything?')
-   console.log(props.key)
+   // console.log('anything?')
+   // console.log(props.key)
 
    return (
 
       <div className='artist-card'>
-         <h2>{props.artistName} / {props.musicGenre}</h2>
+         <img src={props.photo}/>
+         <h2>{props.name}</h2>
+         <h2>#{props.rank} / {props.genre} / {props.type}</h2>
+         <h4>Grammy Nods: {props.gNods} / Wins: 
+         {props.gWins} / Total Sales: {props.sales}</h4>
+         <br></br>
       </div>
 
       )

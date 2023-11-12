@@ -4,7 +4,6 @@ import GenreUpdate from './components/GenreUpdate.jsx'
 import TitleBar from './components/TitleBar.jsx'
 import UpdateListDisplay from './components/UpdateListDisplay.jsx'
 
-// import artistGenres from './top51genres.json'
 import artistMasterData from "./top51artists.json"
 
 const artistGenres = ["All", "Pop", "Rock", "Jazz / Swing", "Hip-hop / R&B", "Folk", "Country", "Reggae", "Soul", "K-Pop", "Alternative" ] 
@@ -48,20 +47,19 @@ const App = (props) => {
 
         <div className='genreUI'>
           <p>Filter by Genre:</p>
+          <TitleBar 
+            genre={curGenre} 
+          />
 
-            <TitleBar 
-              genre={curGenre} 
-            />
-
-            <div id='record-count'>
-              Count: {currentDataSet}
-            </div>
+          <div className='record-count' id='record-count'>
+            Count: {currentDataSet}
           </div>
+        </div>
 
         </div> 
       </div>
 
-      <div id='list-update'>
+      <div id='flex-list'>
         <UpdateListDisplay
           genre={curGenre}
         />

@@ -3,6 +3,7 @@ import App from '../App.jsx'
 import TitleBar from './TitleBar.jsx'
 import GenreUpdate from './GenreUpdate.jsx'
 import artistMasterData from "../top51artists.json"
+import ArtistCard from './ArtistCard.jsx'
 
 
 // receives props.genre & props.masterList
@@ -17,12 +18,22 @@ const artistGenres = ["All", "Pop", "Rock", "Jazz / Swing", "Hip-hop / R&B", "Fo
 const UpdateListDisplay = (props) => {
 
   const workingList=[];
-  const curGenre=props.genre
+
+  console.log('Start of UpdateList component')
+  var curGenre = "All"
+
+  if (artistGenres.includes(props)) {
+    curGenre = props
+    console.log(`UpdList: valid props: `+props)
+  } else {
+    curGenre = props.genre
+    console.log(`UpdList: Invalid props: `+props.genre)
+  }
 
   // const currentGenre=(document.getElementById(`#dropdown`).value)
 
-console.log(`before UpdList update: ` + workingList.length)
-console.log(`genre: ` + curGenre)
+  console.log(`before UpdList update: ` + workingList.length)
+  console.log(`genre: ` + curGenre)
 
    // create new array based on genre
     artistMasterData.forEach((artist) => {
@@ -32,23 +43,43 @@ console.log(`genre: ` + curGenre)
   }
   })
 
-console.log(`after UpdList update: ` + workingList.length)
-console.log(`genre: ` + curGenre)
+  console.log(`after UpdList update: ` + workingList.length)
+  console.log(`genre: ` + curGenre)
 
+  var listNum=("Count: " && (workingList.length))
+  console.log(`UpdList - New div:` + listNum)
+
+  const newCount=document.getElementById("record-count")
+  console.log(`UpdList1: `+newCount)
+  console.log(`UpdList2: `+newCount.innerHTML)
+
+  newCount.innerHTML = listNum
 
   return (
 
-    // eventually this is where we would map
-    // over the array and use ArtistCard
-
-  <div id='upd-cur-list'>
-    <p>Updated Current List</p>
-    <p>1st Entry: {workingList[0].artistName}</p>
-    <p>Array size: {workingList.length}</p>
-  </div>
-
-)
+    <>
+    <script>
+      newCount.innerHTML = ("Count: " + {workingList.length})
+    </script>
+    <div className='artist-card'>
+      {workingList.map((artist, index) => (
+        <ArtistCard
+          key={artist.rank}
+          rank={artist.rank}
+          type={artist.artistType}
+          genre={artist.musicGenre}
+          name={artist.artistName}
+          sales={artist.totalSales}
+          photo={artist.picture}
+          gNods={artist.grammyNods}
+          gWins={artist.grammyWins}
+        />
+      ))}
+    </div>
+    </>
+  )
 
 }
 
 export default UpdateListDisplay
+

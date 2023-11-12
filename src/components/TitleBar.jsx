@@ -3,6 +3,7 @@ import App from '../App'
 import GenreUpdate from './GenreUpdate'
 import artistMasterData from "../top51artists.json"
 import HandleMenu from './HandleMenu'
+import UpdateListDisplay from './UpdateListDisplay'
 
 // PURPOSE:
 // Creates the Titlebar section at the top of the screen
@@ -39,7 +40,7 @@ const TitleBar = (props) => {
    return (
       <div>
          <form>
-            <select id="dropdown" onChange={(e) => App(e.target.value)}>
+            <select id="dropdown" onChange={(e) => UpdateListDisplay(e.target.value)}>
                <option value="All" >All</option>
                <option value="Pop" >Pop</option>
                <option value="Rock" >Rock</option>
