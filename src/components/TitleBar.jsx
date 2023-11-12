@@ -7,23 +7,23 @@ import HandleMenu from './HandleMenu'
 // PURPOSE:
 // Creates the Titlebar section at the top of the screen
 
-// Receives: props.genre and props.masterList
+// Receives: props.genre
 
 
 const TitleBar = (props) => {
 
    const workingList=[];
    try {
-      var curGenre=(document.getElementById(`#dropdown`).value)
-      console.log(`TitleBar Result: `+result);
+         var curGenre=props.genre
+         console.log(`TitleBar Valid: `+curGenre);
       } 
       catch (error) 
       { 
          var curGenre = "All"
+         console.log(`TitleBar invalid: `+curGenre);
       }
    
    console.log(`before TitleBar: ` + workingList.length)
-   console.log(curGenre)
 
    // create new array based on genre
    artistMasterData.forEach((artist) => {
@@ -34,15 +34,10 @@ const TitleBar = (props) => {
    })
 
    console.log(`after TitleBar: ` + workingList.length)
-   console.log(curGenre)
 
 
    return (
-
-   <div className='titleBar'>
-      <h1>Top 51 Artists</h1>
-      <div className='genreUI'>
-         <p>Filter by Genre:</p>
+      <div>
          <form>
             <select id="dropdown" onChange={(e) => App(e.target.value)}>
                <option value="All" >All</option>
@@ -58,12 +53,7 @@ const TitleBar = (props) => {
                <option value="Alternative" >Alternative</option>
             </select>
          </form>
-         <div id='record-count'>
-            Count: {workingList.length}
-         </div>
       </div>
-   </div> 
-
    )  
 
 }
