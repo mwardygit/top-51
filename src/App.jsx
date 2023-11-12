@@ -15,7 +15,7 @@ var workingList=[];
 const App = (props) => {
 
   workingList.length = 0
-  console.log(`App begins`)
+  console.log(`App: begins`)
   console.log(`Count: `+workingList.length)
 
   if (artistGenres.includes(props)) {

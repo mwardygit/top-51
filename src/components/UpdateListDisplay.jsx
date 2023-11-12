@@ -50,10 +50,14 @@ const UpdateListDisplay = (props) => {
   console.log(`UpdList - New div:` + listNum)
 
   const newCount=document.getElementById("record-count")
-  console.log(`UpdList1: `+newCount)
-  console.log(`UpdList2: `+newCount.innerHTML)
 
-  newCount.innerHTML = listNum
+  if (newCount != null) {
+    console.log(`UpdList1: get elem valid count: `+newCount)
+    console.log(`UpdList2: `+newCount.innerHTML)
+   } else {
+    console.log(`UpdList3: get elem INvalid`)
+  }
+
 
   return (
 
