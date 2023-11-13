@@ -1,46 +1,43 @@
 import React from 'react'
 import App from '../App'
-import GenreUpdate from './GenreUpdate'
-import artistMasterData from "../top51artists.json"
-import HandleMenu from './HandleMenu'
-import UpdateListDisplay from './UpdateListDisplay'
+import HandleMenu from './HandleMenu.jsx'
+
 
 // PURPOSE:
-// Creates the Titlebar section at the top of the screen
+// Creates the pull-down menu in title bar
+// Receives: NO props
 
-// Receives: props.genre
+const TitleBar = () => {
 
+   // const workingList=[];
 
-const TitleBar = (props) => {
-
-   const workingList=[];
-   try {
-         var curGenre=props.genre
-         console.log(`TitleBar Valid: `+curGenre);
-      } 
-      catch (error) 
-      { 
-         var curGenre = "All"
-         console.log(`TitleBar invalid: `+curGenre);
-      }
+   // determines current genre
+   // try {
+   //       var curGenre=props.genre
+   //       console.log(`TitleBar Valid: `+curGenre);
+   //    } 
+   //    catch (error) 
+   //    { 
+   //       var curGenre = "All"
+   //       console.log(`TitleBar invalid: `+curGenre);
+   //    }
    
-   console.log(`before TitleBar: ` + workingList.length)
+   // console.log(`before TitleBar: ` + workingList.length)
 
-   // create new array based on genre
-   artistMasterData.forEach((artist) => {
-      if ((artist.musicGenre.includes(curGenre)) || (curGenre == "All"))
-   { 
-      workingList.push(artist);
-   }
-   })
-
-   console.log(`after TitleBar: ` + workingList.length)
+   // create new array based on genre - WHY?!?!
+   // artistMasterData.forEach((artist) => {
+   //    if ((artist.musicGenre.includes(curGenre)) || (curGenre == "All"))
+   // { 
+   //    workingList.push(artist);
+   // }
+   // })
+   // console.log(`after TitleBar: ` + workingList.length)
 
 
    return (
       <div>
          <form>
-            <select id="dropdown" onChange={(e) => UpdateListDisplay(e.target.value)}>
+            <select id="drop-down" onChange={(e) => HandleMenu(e.target.value)}>
                <option value="All" >All</option>
                <option value="Pop" >Pop</option>
                <option value="Rock" >Rock</option>

@@ -2,9 +2,9 @@ import React from 'react'
 import App from '../App.jsx'
 
 // Parent = UpdateListDisplay
-// This draws each artist 'card'
-// props: rank, type, genre, name,
-// sales, photo, gNods, gWins
+// This creates each artist 'card' for display
+// props: rank, type, genre, name, sales, 
+// photo, gNods, gWins
 
 const ArtistCard = (props) => {
 
@@ -12,8 +12,8 @@ const ArtistCard = (props) => {
    // console.log(props.key)
 
    return (
-
-      <div className='artist-card'>
+      
+      <div id='artist-card'>
          <img src={props.photo}/>
          <h2>{props.name}</h2>
          <h2>#{props.rank} / {props.genre} / {props.type}</h2>
@@ -21,6 +21,7 @@ const ArtistCard = (props) => {
          {props.gWins} / Total Sales: {props.sales}</h4>
          <br></br>
       </div>
+      
 
       )
 

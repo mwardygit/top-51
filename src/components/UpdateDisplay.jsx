@@ -6,20 +6,26 @@ import artistMasterData from "../top51artists.json"
 import ArtistCard from './ArtistCard.jsx'
 
 
-// receives props.genre & props.masterList
+// receives props.genre
 
 // maps through artistMasterData
 // artists who match genre go to
 // ArtistCard.jsx for display
+
 // Then TitleBar updates record count?
 
 const artistGenres = ["All", "Pop", "Rock", "Jazz / Swing", "Hip-hop / R&B", "Folk", "Country", "Reggae", "Soul", "K-Pop", "Alternative" ]
 
-const UpdateListDisplay = (props) => {
+const UpdateDisplay = (props) => {
 
   const workingList=[];
 
   console.log('Start of UpdateList component')
+  
+  // need to determine valid current Genre
+  // first time thru props might be weird
+  // default to "All"
+  
   var curGenre = "All"
 
   if (artistGenres.includes(props)) {
@@ -47,14 +53,14 @@ const UpdateListDisplay = (props) => {
   console.log(`genre: ` + curGenre)
 
   var listNum=("Count: " && (workingList.length))
-  console.log(`UpdList - New div:` + listNum)
+  console.log(`UpdList - New html obj: ` + listNum)
 
   const newCount=document.getElementById("record-count")
 
   if (newCount != null) {
     console.log(`UpdList1: get elem valid count: `+newCount)
     console.log(`UpdList2: `+newCount.innerHTML)
-   } else {
+  } else {
     console.log(`UpdList3: get elem INvalid`)
   }
 
@@ -63,10 +69,11 @@ const UpdateListDisplay = (props) => {
 
     <>
     <script>
-      newCount.innerHTML = ("Count: " + {workingList.length})
+      newCount.innerHTML = listNum
     </script>
-    <div className='artist-card'>
-      {workingList.map((artist, index) => (
+
+    <div id='artist-card'>
+      {workingList.map((artist) => (
         <ArtistCard
           key={artist.rank}
           rank={artist.rank}
@@ -85,5 +92,5 @@ const UpdateListDisplay = (props) => {
 
 }
 
-export default UpdateListDisplay
+export default UpdateDisplay
 
