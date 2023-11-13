@@ -1,65 +1,31 @@
 import React from 'react'
 import App from '../App.jsx'
-import TitleBar from './TitleBar.jsx'
-import GenreUpdate from './GenreUpdate.jsx'
 import artistMasterData from "../top51artists.json"
 import ArtistCard from './ArtistCard.jsx'
+import HandleMenu from './HandleMenu.jsx'
 
 
-// receives props.genre
-
-// maps through artistMasterData
-// artists who match genre go to
-// ArtistCard.jsx for display
-
-// Then TitleBar updates record count?
-
-const artistGenres = ["All", "Pop", "Rock", "Jazz / Swing", "Hip-hop / R&B", "Folk", "Country", "Reggae", "Soul", "K-Pop", "Alternative" ]
+// receives props.genre & artistArray
+// 1) Updates the current match count in title area
+// 2) maps through array of matches and calls
+//    ArtistCard.jsx for each
 
 const UpdateDisplay = (props) => {
 
-  const workingList=[];
+  const curGenre=props.genre;
+  const workingList=props.workingList;
 
   console.log('Start of UpdateList component')
-  
-  // need to determine valid current Genre
-  // first time thru props might be weird
-  // default to "All"
-  
-  var curGenre = "All"
-
-  if (artistGenres.includes(props)) {
-    curGenre = props
-    console.log(`UpdList: valid props: `+props)
-  } else {
-    curGenre = props.genre
-    console.log(`UpdList: Invalid props: `+props.genre)
-  }
-
-  // const currentGenre=(document.getElementById(`#dropdown`).value)
-
-  console.log(`before UpdList update: ` + workingList.length)
-  console.log(`genre: ` + curGenre)
-
-   // create new array based on genre
-    artistMasterData.forEach((artist) => {
-      if ((artist.musicGenre.includes(curGenre)) || (curGenre == "All"))
-  { 
-    workingList.push(artist);
-  }
-  })
-
-  console.log(`after UpdList update: ` + workingList.length)
-  console.log(`genre: ` + curGenre)
+  console.log(curGenre + ` / ` + workingList.length)
 
   var listNum=("Count: " && (workingList.length))
-  console.log(`UpdList - New html obj: ` + listNum)
+  console.log(`UpdList2 - New html obj: ` + listNum)
 
-  const newCount=document.getElementById("record-count")
+  const curCount=document.getElementById("genre-matches")
 
   if (newCount != null) {
-    console.log(`UpdList1: get elem valid count: `+newCount)
-    console.log(`UpdList2: `+newCount.innerHTML)
+    console.log(`UpdList3: get elem valid count: `+curCount)
+    console.log(`UpdList4: `+curCount.innerHTML)
   } else {
     console.log(`UpdList3: get elem INvalid`)
   }
@@ -69,10 +35,10 @@ const UpdateDisplay = (props) => {
 
     <>
     <script>
-      newCount.innerHTML = listNum
+      curCount.innerHTML = listNum
     </script>
 
-    <div id='artist-card'>
+    <div id='artist-area'>
       {workingList.map((artist) => (
         <ArtistCard
           key={artist.rank}

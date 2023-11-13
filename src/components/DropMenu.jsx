@@ -1,5 +1,5 @@
 import React from 'react'
-import App from '../App'
+import App from '../App.jsx'
 import HandleMenu from './HandleMenu.jsx'
 
 
@@ -7,7 +7,7 @@ import HandleMenu from './HandleMenu.jsx'
 // Creates the pull-down menu in title bar
 // Receives: NO props
 
-const TitleBar = () => {
+const DropMenu = () => {
 
    // const workingList=[];
 
@@ -56,4 +56,4 @@ const TitleBar = () => {
 
 }
 
-export default TitleBar
+export default DropMenu

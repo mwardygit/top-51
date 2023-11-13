@@ -1,7 +1,5 @@
 import './App.css'
-import ArtistCard from './components/ArtistCard.jsx'
-import GenreUpdate from './components/GenreUpdate.jsx'
-import TitleBar from './components/TitleBar.jsx'
+import DropMenu from './components/DropMenu.jsx'
 import UpdateDisplay from './components/UpdateDisplay.jsx'
 
 import artistMasterData from "./top51artists.json"
@@ -11,6 +9,7 @@ const artistGenres = ["All", "Pop", "Rock", "Jazz / Swing", "Hip-hop / R&B", "Fo
 var curGenre = 'All'
 var workingList=[];
 
+// receives: props.genre (except maybe 1st pass)
 
 const App = (props) => {
 
@@ -18,7 +17,7 @@ const App = (props) => {
   console.log(`App: begins`)
   console.log(`Count: `+workingList.length)
 
-  // determine current Genre setting
+  // determine current Genre 
   if (artistGenres.includes(props)) {
       curGenre = props
       console.log(`App: valid props: `+props)
@@ -42,30 +41,27 @@ const App = (props) => {
 
     return (
     <>
-      <head>
+
         <div id='top-nav-bar'>
-          <div id='title-area'>
-              <h1>Top 51 Artists</h1>
-
-              <div id='genre-menu'>
-                <p>Filter by Genre:</p>
-                <TitleBar/>
-
-                <div id='record-count'>
-                  Count: {currentMatches}
-                </div>
+            <div id='title-area'>
+                <h1>Top 51 Artists</h1>
+            </div>
+            <div id='genre-menu'>
+              <p>Filter by Genre:</p>
+              <DropMenu/>
+              <div id='genre-matches'>
+                Count: {currentMatches}
               </div>
-          </div> 
+            </div>
         </div>
-      </head>
 
-      <body>
         <div id='flex-list'>
           <UpdateDisplay
             genre={curGenre}
+            artists={workingList}
           />
         </div>
-      </body>
+
     </>
     )
 }
