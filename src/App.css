@@ -35,13 +35,13 @@ h1 {
 #artist-card {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items:center;
   background-color: gray;
   width: 600px;
   height: 300px;
   border: 3px dotted #fdf0a9;
   border-radius: 5%;
-  margin: 30px 10px;
+  margin: 10px 10px;
 }
 
 img {

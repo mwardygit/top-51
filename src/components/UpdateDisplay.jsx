@@ -5,7 +5,7 @@ import ArtistCard from './ArtistCard.jsx'
 import HandleMenu from './HandleMenu.jsx'
 
 
-// receives props.genre & artistArray
+// receives props.genre & artists
 // 1) Updates the current match count in title area
 // 2) maps through array of matches and calls
 //    ArtistCard.jsx for each
@@ -13,21 +13,21 @@ import HandleMenu from './HandleMenu.jsx'
 const UpdateDisplay = (props) => {
 
   const curGenre=props.genre;
-  const workingList=props.workingList;
+  const workingList=props.artists;
 
   console.log('Start of UpdateList component')
   console.log(curGenre + ` / ` + workingList.length)
 
-  var listNum=("Count: " && (workingList.length))
-  console.log(`UpdList2 - New html obj: ` + listNum)
+  var listNum=("Count: " + (workingList.length))
+  console.log(`UpdDisp2 - New html obj: ` + listNum)
 
   const curCount=document.getElementById("genre-matches")
 
-  if (newCount != null) {
-    console.log(`UpdList3: get elem valid count: `+curCount)
-    console.log(`UpdList4: `+curCount.innerHTML)
+  if (curCount != null) {
+    console.log(`UpdDisp3: get elem valid count: `+curCount)
+    console.log(`UpdDisp4: `+curCount.innerHTML)
   } else {
-    console.log(`UpdList3: get elem INvalid`)
+    console.log(`UpdDisp3: get elem INvalid`)
   }
 
 

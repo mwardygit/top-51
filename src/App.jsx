@@ -14,16 +14,16 @@ var workingList=[];
 const App = (props) => {
 
   workingList.length = 0
-  console.log(`App: begins`)
-  console.log(`Count: `+workingList.length)
+  console.log(`App- begins`)
+  console.log(`Count- `+workingList.length)
 
   // determine current Genre 
   if (artistGenres.includes(props)) {
       curGenre = props
-      console.log(`App: valid props: `+props)
+      console.log(`App- valid props: `+props)
     } else {
       curGenre = props.genre
-      console.log(`App: Invalid props: `+props.genre)
+      console.log(`App- Invalid props: `+props.genre)
     }
   
   // Put all matches into working array
@@ -34,8 +34,8 @@ const App = (props) => {
   }
   })
 
-  console.log(`App: `+curGenre);
-  console.log(`App count: `+workingList.length)
+  console.log(`App- `+curGenre);
+  console.log(`App count- `+workingList.length)
 
   var currentMatches = workingList.length
 

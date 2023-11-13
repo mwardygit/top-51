@@ -42,13 +42,12 @@ const HandleMenu = (props) => {
   console.log(`aftr HMenu update: ` + workingList.length 
   + ` / ` + curGenre)
 
-  
-
 
   return (
     
       <UpdateDisplay
         genre={curGenre}
+        artists={workingList}      
       />
     
   )
