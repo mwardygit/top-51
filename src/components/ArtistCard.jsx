@@ -6,25 +6,31 @@ import App from '../App.jsx'
 // props: rank, type, genre, name, sales, 
 // photo, gNods, gWins
 
+
 const ArtistCard = (props) => {
 
-   // console.log('anything?')
-   // console.log(props.key)
-
    return (
-      
+      <>
       <div id='artist-card'>
-         <img src={props.photo}/>
-         <h2>{props.name}</h2>
-         <h2>#{props.rank} / {props.genre} / {props.type}</h2>
-         <h4>Grammy Nods: {props.gNods} / Wins: 
-         {props.gWins} / Total Sales: {props.sales}</h4>
-         <br></br>
+         <div id='artist-pic'>
+            <img src={props.photo}/>
+         </div>
+         <div id='artist-stats'>
+            <h2>#{props.rank}: {props.name} <br></br>
+            Genre: {props.genre}</h2>
+            -- <br></br>
+            <h4>Grammy Nods: {props.gNods} <br></br>
+            Grammy Wins: {props.gWins} <br></br>
+            <br></br>
+            Total Sales: {props.sales}</h4>
+         </div>
       </div>
-      
+      </>
 
       )
 
    }
 
 export default ArtistCard
+
+

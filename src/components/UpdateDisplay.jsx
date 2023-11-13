@@ -30,6 +30,7 @@ const UpdateDisplay = (props) => {
     console.log(`UpdDisp3: get elem INvalid`)
   }
 
+  console.log(`UpdDisp9: `+workingList[3].totalSales)
 
   return (
 

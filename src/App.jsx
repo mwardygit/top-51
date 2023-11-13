@@ -17,6 +17,7 @@ const App = (props) => {
   console.log(`App- begins`)
   console.log(`Count- `+workingList.length)
 
+
   // determine current Genre 
   if (artistGenres.includes(props)) {
       curGenre = props
