@@ -36,7 +36,7 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: gray;
+  background-color: rgb(54, 51, 51);
   width: 500px;
   height: 250px;
   border: 3px dotted #fdf0a9;
@@ -66,6 +66,7 @@ img {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+  color:rgb(253, 240, 169);
   height: 200px;
   margin-bottom: 10%;
   margin-left: 0;

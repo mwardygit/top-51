@@ -25,6 +25,11 @@ const App = () => {
 
   var currentMatches = workingList.length
 
+// if then
+// return
+// else 
+// return
+
     return (
     <>
         <Header 
