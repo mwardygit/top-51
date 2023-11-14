@@ -5,6 +5,7 @@ import UpdateDisplay from './components/UpdateDisplay.jsx'
 
 import artistMasterData from "./top51artists.json"
 import Header from './components/Header.jsx'
+import About from './components/About.jsx'
 const artistGenres = ["All", "Pop", "Rock", "Jazz / Swing", "Hip-hop / R&B", "Folk", "Country", "Reggae", "Soul", "K-Pop", "Alternative" ]
 
 
@@ -13,6 +14,7 @@ const artistGenres = ["All", "Pop", "Rock", "Jazz / Swing", "Hip-hop / R&B", "Fo
 const App = () => {
 
   const [curGenre, setCurGenre]=useState("All");
+  const [curPage, setCurPage]=useState(1);
   const workingList = [];
     
   // Put all matches into working array
@@ -25,15 +27,13 @@ const App = () => {
 
   var currentMatches = workingList.length
 
-// if then
-// return
-// else 
-// return
+  if (curPage==1) {
 
     return (
     <>
         <Header 
           onChange={setCurGenre}
+          onPage={setCurPage}
           allGenres={artistGenres}
           currentMatches={currentMatches}
         />
@@ -45,6 +45,23 @@ const App = () => {
         </div>
     </>
     )
+
+} else {
+
+  return (
+    
+    <>
+      <About 
+        onPage={setCurPage}
+      />
+    </>
+
+  )
+
+}
+
+
+
 }
 
 
