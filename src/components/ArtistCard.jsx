@@ -1,6 +1,6 @@
 import React from 'react'
 import App from '../App.jsx'
-import shinyStar from '../goldStar.png'
+
 
 // Parent = UpdateListDisplay
 // This creates each artist 'card' for display
@@ -17,14 +17,11 @@ const ArtistCard = (props) => {
             <img src={props.photo}/>
          </div>
          <div id='artist-stats'>
-            {/* <img src={shinyStar}/> */}
-            <h2>#{props.rank}: {props.name} <br></br>
-            Genre: {props.genre}</h2>
-            -- <br></br>
-            <h4>Grammy Nods: {props.gNods} <br></br>
-            Grammy Wins: {props.gWins} <br></br>
-            <br></br>
-            Total Sales: {props.sales}</h4>
+            <h2>#{props.rank} ~ {props.name} </h2>
+            <h3>Genre: {props.genre}</h3>
+            <h4>Grammy Nods: {props.gNods}</h4>
+            <h4>Grammy Wins: {props.gWins}</h4>
+            <h4 id='artist-sales'>Total Sales: {props.sales}</h4>
          </div>
       </div>
       </>

@@ -22,7 +22,7 @@ const Header = (props) => {
                onChange={props.onChange}
                allGenres={props.allGenres}
             /></h3>
-            <p>{'[ ' + props.currentMatches + ' ]'}</p>
+            <h4>{props.currentMatches}</h4>
          </div>
       </div>
    )
