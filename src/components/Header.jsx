@@ -17,12 +17,12 @@ const Header = (props) => {
             <h1>Top 51 Artists</h1>
          </div>
          <div id='genre-menu'>
-            <h3>Filter:
+            <h3>Genre
             <DropMenu
                onChange={props.onChange}
                allGenres={props.allGenres}
             /></h3>
-            <p>{'- ' + props.currentMatches + ' -'}</p>
+            <p>{'[ ' + props.currentMatches + ' ]'}</p>
          </div>
       </div>
    )
