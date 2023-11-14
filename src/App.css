@@ -2,8 +2,8 @@
 /* HEADER SPACE & ITEMS */
 #top-nav-bar {
   display:flex;
-  align-items:flex-start;
-  justify-content: space-between;
+  align-items:center;
+  justify-content: space-around;
   position:fixed;
   top: 0;
   left: 0;
@@ -37,7 +37,17 @@
 #main-title img {
   width: 70px;
   height: 70px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+}
+#go-page2 img {
+  /* width: 70px; */
+  /* height: 70px; */
+  /* margin-top: 20px; */
+}
+#go-page2 button {
+  /* width: 70px; */
+  /* height: 30px; */
+  margin-top: 10px;
 }
 
     /* ++++++++++++ */

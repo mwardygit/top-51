@@ -12,7 +12,8 @@ const About = (props) => {
     return (
     <div id='about-page'>
         <div id='about-title'>
-            <img src={vinylPic}/>
+            {/* <img src={vinylPic}/> */}
+            <button class='btn-sm' id="delay-skip" value={1} onClick={(e) => props.onPage(e.target.value)}><img src={vinylPic}/></button>
             <h1>The 'Top-51'</h1>
         </div>
         <div className='about-text' id='about-text'>

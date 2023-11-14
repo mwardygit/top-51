@@ -9,23 +9,23 @@ body {
 #about-title {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     font-family:fantasy;
     font-size: xx-large;
     font-variant-caps: all-small-caps;
-    width:550px;
+    /* width:550px; */
     border: 4px darkgray;
     border-style:ridge;
     background-color: #282828;
 }
-#about-title img {
-    height: 30%;
-    width: 30%;
-    padding: 25px 25px;
-    font-family:fantasy;
-    font-size: xx-large;
-    font-variant-caps: all-small-caps;
-    background-color: #282828;
-    color:goldenrod;
+#delay-skip img {
+    height: 130px;
+    width: 130px;
+}
+#delay-skip button {
+    z-index:auto;
+    color:red;
+    background-color: red;
 }
 #about-title h1 {
     font-family:fantasy;
@@ -34,7 +34,6 @@ body {
     margin-top: 30px;
     border-bottom: 1px solid goldenrod;
 }
-
 
 #about-text {
     color: goldenrod;
