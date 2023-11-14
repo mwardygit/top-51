@@ -1,5 +1,6 @@
 import React from 'react'
 import App from '../App.jsx'
+import shinyStar from '../goldStar.png'
 
 // Parent = UpdateListDisplay
 // This creates each artist 'card' for display
@@ -16,6 +17,7 @@ const ArtistCard = (props) => {
             <img src={props.photo}/>
          </div>
          <div id='artist-stats'>
+            {/* <img src={shinyStar}/> */}
             <h2>#{props.rank}: {props.name} <br></br>
             Genre: {props.genre}</h2>
             -- <br></br>
