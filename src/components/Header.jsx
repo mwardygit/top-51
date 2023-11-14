@@ -17,7 +17,9 @@ const Header = (props) => {
             <img src={vinylPic}/>
             <h1>Top 51 Artists</h1>
          </div>
-         <button id="go-page2" value={2} onClick={(e) => props.onPage(e.target.value)}>ABOUT</button>
+
+         {/* <button id="go-page2" value={2} onClick={(e) => props.onPage(e.target.value)}>ABOUT</button> */}
+         
          <div id='genre-menu'>
             <h3>Genre
             <DropMenu

@@ -14,7 +14,7 @@ const artistGenres = ["All", "Pop", "Rock", "Jazz / Swing", "Hip-hop / R&B", "Fo
 const App = () => {
 
   const [curGenre, setCurGenre]=useState("All");
-  const [curPage, setCurPage]=useState(1);
+  const [curPage, setCurPage]=useState(2);
   const workingList = [];
     
   // Put all matches into working array
