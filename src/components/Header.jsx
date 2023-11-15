@@ -14,7 +14,6 @@ const Header = (props) => {
    return (
       <div id='top-nav-bar'>
          <div id='main-title'>
-            {/* <img src={vinylPic}/> */}
             <button id="go-page2" 
                value={2} 
                onClick={(e) => {
@@ -24,9 +23,6 @@ const Header = (props) => {
             </button>
             <h1>Top 51 Artists</h1>
          </div>
-
-         {/* <button id="go-page2" value={2} onClick={(e) => props.onPage(e.target.value)}>ABOUT</button> */}
-         
          <div id='genre-menu'>
             <h3>Genre
             <DropMenu
