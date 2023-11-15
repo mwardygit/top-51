@@ -3,7 +3,7 @@ body {
     margin-top: 51px;
     display:flex;
     justify-content: center;
-    background-color: #282828;
+    background: linear-gradient(0.25turn,#282828, #4f3727, #282828);
 }
 
 #about-title {
@@ -31,6 +31,7 @@ body {
     font-variant-caps: all-small-caps;
     color: goldenrod;
     margin-top: 30px;
+    margin-left: 15px;
     border-bottom: 1px solid goldenrod;
 }
 
@@ -123,4 +124,8 @@ body {
     color: #fdf0a9;
     text-align: center;
     padding: 10px 40px;
+}
+
+#delay-skip:hover {
+    border: 6px dotted red;
 }

@@ -9,9 +9,11 @@
   left: 0;
   width: 100%;
   height: 160px;
-  background-color: goldenrod;
+  /* background-color: goldenrod; */
+  background: linear-gradient(goldenrod,#e66465);
   color: #fdf0a9;
-  border-bottom: 3px solid #fdf0a9;
+  border: 4px ridge darkgray;
+
 }
     /* ++++++++++++ */
 #main-title {
@@ -24,6 +26,9 @@
   border: 4px darkgray;
   border-style:ridge;
   background-color: #282828;
+}
+#go-page2:hover {
+  border: 6px dotted red;
 }
 #main-title h1 {
   font-family:fantasy;
@@ -88,7 +93,8 @@
 body {
   margin: 0;
   text-align: center;
-  background-color: #424040;
+  /* background-color: #424040; */
+  background: linear-gradient(0.25turn,#282828, #4f3727, #282828);
 }
 
 #artist-area {
