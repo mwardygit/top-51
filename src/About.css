@@ -33,11 +33,17 @@ body {
     margin-top: 30px;
     border-bottom: 1px solid goldenrod;
 }
-
+#about-text h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: lighter;
+    padding: 25px 0 35px 0;
+    border-bottom: 1px solid darkgray;
+}
 #about-text {
     color: rgb(231, 210, 158);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size:medium;
+    font-size:x-large;
     animation: fadeIn;
     animation-fill-mode: forwards;
 }
@@ -55,17 +61,18 @@ body {
     animation-fill-mode: forwards;
 }
 #delay-b {
+    /* The 51 top ... */
     opacity: 0;    
     animation-name: fadeIn;
-    animation-delay: 4s;
+    animation-delay: 3s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
 #delay-c {
     opacity: 0;
     animation-name: fadeIn;
-    animation-delay: 8s;
-    animation-duration: 0s;
+    animation-delay: 7s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
 }
 #delay-d {
@@ -99,8 +106,8 @@ body {
 #go-page1 {
     opacity: 0;
     animation-name: fadeIn;
-    animation-delay: 26s;
-    animation-duration: 3s;
+    animation-delay: 28s;
+    animation-duration: 0s;
     animation-fill-mode: forwards;
 }
 #about-text h1 {
@@ -114,9 +121,9 @@ body {
     font-size: x-large;
     font-variant-caps: all-small-caps;
     background-color: #424040;
-    color: #fdf0a9;
+    color: chartreuse;
     text-align: center;
-    padding: 10px 40px;
+    padding: 15px 40px;
 }
 
 #delay-skip:hover {

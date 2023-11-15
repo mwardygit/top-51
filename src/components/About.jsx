@@ -44,19 +44,19 @@ const About = (props) => {
             <h1>The 'Top-51'</h1>
         </div>
         <div className='about-text' id='about-text'>
-            <h1 id='delay-a' className='delayed'>Welcome to the Top-51</h1>
+            <h2 id='delay-a' className='delayed'>Welcome to the Top-51</h2>
             <br></br>
-            <h2 id='delay-b'className='delayed'>The 51 top music acts ranked by total sales.</h2>
+            <p id='delay-b'className='delayed'>The 51 top music acts ranked by total sales.</p>
             
-            <h2 id='delay-c' className='delayed'>Sales data includes records, CDs, and streaming, adjusted for era.</h2>
+            <p id='delay-c' className='delayed'>Sales data includes records, CDs, and streaming, adjusted for era.</p>
 
-            <h2 id='delay-d' className='delayed'>Did your favorite band or singer make the list?</h2>
+            <p id='delay-d' className='delayed'>Did your favorite band or singer make the list?</p>
 
-            <h2 id='delay-d2' className='delayed'>Is there a correlation between sales and Grammy awards?</h2>
+            <p id='delay-d2' className='delayed'>Is there a correlation between sales and Grammy awards?</p>
 
-            <h2 id='delay-e' className='delayed'>Use the 'Genre' menu to filter by music type.</h2>
+            <p id='delay-e' className='delayed'>Use the 'Genre' menu to filter by music type.</p>
 
-            <h2 id='delay-f' className='delayed'>Feel free to explore the space!</h2>
+            <p id='delay-f' className='delayed'>Feel free to explore the space!</p>
             <br></br> <br></br>
         </div>
         <button className='delayed'
