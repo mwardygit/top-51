@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && touch ./dist/CNAME && echo <'top51-artists.surge.sh'> >> ./dist/CNAME && npx surge --project ./dist --domain <'top51-artists.surge.sh'>",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "build": "vite build && touch ./dist/CNAME && echo <'american-top-51.surge.sh'> >> ./dist/CNAME && npx surge --project ./dist --domain <'american-top-51.surge.sh'>"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -26,3 +25,5 @@
   }
 }
 
+
+"build": "vite build && touch ./dist/CNAME && echo <SURGE_URL_IN_SINGLE_QUOTES> >> ./dist/CNAME && npx surge --project ./dist --domain <SURGE_URL_IN_SINGLE_QUOTES>"
