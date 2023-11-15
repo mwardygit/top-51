@@ -57,7 +57,7 @@ const App = () => {
       <About 
         onChange={setCurGenre}
         onPage={setCurPage}
-        gen={curGenre}
+        curGenre={curGenre}
       />
     </>
 

@@ -1,4 +1,5 @@
 import '../About.css'
+// import { useState } from 'react'
 import React from 'react'
 import vinylPic from '../goldRecord.jpg'
 
@@ -6,7 +7,7 @@ import vinylPic from '../goldRecord.jpg'
 // receives: props.onChange (button click)
 // Only way off this page is to click button,
 // which changes "curPage".
-// also passing onChange & gen(re), when we
+// also passing onChange & curGenre, when we
 // return to main page the list & # of matches
 // should reset to what they were before coming here.
 // For some reason the Genre menu isn't updating to
@@ -15,22 +16,27 @@ import vinylPic from '../goldRecord.jpg'
 
 const About = (props) => {
     
-    var g=(props.gen)
-
+    // var OG=(props.curGenre)
+    // console.log('Abt1: OG='+OG)
+    
     const killAnims = () => {
         const anims = (document.getElementsByClassName("delayed"));
         for (let i = 0; i < anims.length; i++) {
             anims[i].style.animationDelay = "0s";
             }
         }
-    
+
+    // const refreshG = () => {
+    //     console.log(`Abt2: CG reset to `+OG)
+    //     props.onChange(OG);
+    //     }
+        
     return (
     <div id='about-page'>
         <div id='about-title'>
             <button id="delay-skip" 
                 value={1} 
                 onClick={(e) => {
-                    props.onChange(g);
                     killAnims();
                 }}>
                 <img src={vinylPic}/>
@@ -57,7 +63,7 @@ const About = (props) => {
             id="go-page1"
             value={1}
             onClick={(e) => {
-                props.onChange(g);
+                // refreshG();
                 props.onPage(e.currentTarget.value);
             }}>
             let's go to the list!
