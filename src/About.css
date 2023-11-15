@@ -10,10 +10,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 20px;
     font-family:fantasy;
     font-size: xx-large;
     font-variant-caps: all-small-caps;
-    /* width:550px; */
     border: 4px darkgray;
     border-style:ridge;
     background-color: #282828;
@@ -23,9 +23,8 @@ body {
     width: 130px;
 }
 #delay-skip button {
-    z-index:auto;
-    color:red;
-    background-color: red;
+    height: 130px;
+    width: 130px;
 }
 #about-title h1 {
     font-family:fantasy;

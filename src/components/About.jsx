@@ -12,8 +12,13 @@ const About = (props) => {
     return (
     <div id='about-page'>
         <div id='about-title'>
-            {/* <img src={vinylPic}/> */}
-            <button class='btn-sm' id="delay-skip" value={1} onClick={(e) => props.onPage(e.target.value)}><img src={vinylPic}/></button>
+            <button id="delay-skip" 
+                value={1} 
+                onClick={(e) => {
+                    props.onPage(e.currentTarget.value);
+                }}>
+                <img src={vinylPic}/>
+            </button>
             <h1>The 'Top-51'</h1>
         </div>
         <div className='about-text' id='about-text'>
@@ -32,7 +37,14 @@ const About = (props) => {
             <h2 className='delay-f'>You're welcome.</h2>
             <br></br> <br></br>
         </div>
-        <button className='delay-g' id="go-page1" value={1} onClick={(e) => props.onPage(e.target.value)}>let's go to the list!</button>
+        <button className='delay-g'
+            id="go-page1"
+            value={1}
+            onClick={(e) => {
+                props.onPage(e.currentTarget.value);
+            }}>
+            let's go to the list!
+        </button>
     </div>
     )
 }
