@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 150px;
+  height: 160px;
   background-color: goldenrod;
   color: #fdf0a9;
   border-bottom: 3px solid #fdf0a9;
@@ -65,14 +65,12 @@
   color: gold;
   margin-top: 0;
   padding-top: 11px;
-  /* padding-bottom: 0px; */
   margin-bottom: 0px;
 }
 #drop-down {
   margin-top: 12px;
   font-family:Arial, Helvetica, sans-serif;
   font-size: x-large;
-  /* background-color: rgb(31, 40, 42); */
   background-color: #424040;
   color: #fdf0a9;
   text-align: center;
@@ -89,14 +87,12 @@
 /* MAIN BODY - CONTAINER */
 body {
   margin: 0;
-  margin-top: 150px;
   text-align: center;
   background-color: #424040;
 }
 
 #artist-area {
-  /* background-color: #424040; */
-  margin-top: 120px;
+  margin-top: 110px;
   padding-top: 20px;
   display: flex;
   flex-direction: row;
@@ -133,8 +129,13 @@ body {
 #artist-stats {
   flex-basis: 100%;
   margin: 1px 10px 1px 0;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: rgb(252, 223, 57);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: goldenrod;
+}
+#artist-stats h2 {
+  color: rgb(252, 242, 57);
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(252, 138, 57, 0.807);
 }
 #artist-sales {
   color: rgb(12, 215, 242);

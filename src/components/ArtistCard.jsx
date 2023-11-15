@@ -17,7 +17,7 @@ const ArtistCard = (props) => {
             <img src={props.photo}/>
          </div>
          <div id='artist-stats'>
-            <h2>#{props.rank} ~ {props.name} </h2>
+            <h2>#{props.rank+" "}{" "+props.name} </h2>
             <h3>Genre: {props.genre}</h3>
             <h4>Grammy Nods: {props.gNods}</h4>
             <h4>Grammy Wins: {props.gWins}</h4>
