@@ -37,8 +37,8 @@ body {
 
 #about-text {
     color: goldenrod;
-    font-family:fantasy;
-    font-size: large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:medium;
     animation: fadeIn;
     animation-fill-mode: forwards;
 }
@@ -46,64 +46,64 @@ body {
     0% { opacity: 0; }
     100% {opacity: 1; }
 }
-.delay-0 {
+/* .delay-0 {
     opacity: 0;
     animation-name: fadeIn;
     animation-delay: 0s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
-}
+} */
 /* Welcome to the Top-51 */
-.delay-a {
+#delay-a {
     opacity: 0;
     animation-name: fadeIn;
     animation-delay: 0s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-.delay-b {
+#delay-b {
     opacity: 0;    
     animation-name: fadeIn;
     animation-delay: 4s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-.delay-c {
+#delay-c {
     opacity: 0;
     animation-name: fadeIn;
     animation-delay: 8s;
     animation-duration: 0s;
     animation-fill-mode: forwards;
 }
-.delay-d {
+#delay-d {
     opacity: 0;
     animation-name: fadeIn;
     animation-delay: 11s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-.delay-d2 {
+#delay-d2 {
     opacity: 0;
     animation-name: fadeIn;
     animation-delay: 15s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-.delay-e {
+#delay-e {
     opacity: 0;
     animation-name: fadeIn;
     animation-delay: 19s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-.delay-f {
+#delay-f {
     opacity: 0;
     animation-name: fadeIn;
     animation-delay: 23s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-.delay-g {
+#go-page1 {
     opacity: 0;
     animation-name: fadeIn;
     animation-delay: 26s;

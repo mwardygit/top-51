@@ -30,6 +30,8 @@ const App = () => {
   if (curPage==1) {
 
     return (
+
+    // Show the MAIN page
     <>
         <Header 
           onChange={setCurGenre}
@@ -49,7 +51,8 @@ const App = () => {
 } else {
 
   return (
-    
+
+    // Show the ABOUT page
     <>
       <About 
         onChange={setCurGenre}
