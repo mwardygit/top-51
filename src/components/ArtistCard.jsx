@@ -20,8 +20,8 @@ const ArtistCard = (props) => {
             <h2>#{props.rank+" "}{" "+props.name} </h2>
             <h3>Genre: {props.genre}</h3>
             <h4>Grammy Nods: {props.gNods}</h4>
-            <h4>Grammy Wins: {props.gWins}</h4>
-            <h4 id='artist-sales'>Total Sales: {props.sales}</h4>
+            <h4>Grammy Wins: {props.gWins}<br></br></h4>
+            <h5 className='salesData' id='artist-sales'>Total Sales: {props.sales}</h5>
          </div>
       </div>
       </>
