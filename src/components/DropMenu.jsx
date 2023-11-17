@@ -2,13 +2,13 @@ import React from 'react'
 
 
 // PURPOSE:
-// Creates the pull-down menu in title bar
+// Creates the GERNRE menu in title bar
 // Receives: props.onChange call-back function
-//       also props.allGenres array
+//           props.allGenres array
 
 const DropMenu = (props) => {
 
-   return (
+return (
       <div>
          <form>
             <select id="drop-down" onChange={(e) => props.onChange(e.target.value)}>
@@ -17,7 +17,6 @@ const DropMenu = (props) => {
          </form>
       </div>
    )  
-
 }
 
 export default DropMenu
