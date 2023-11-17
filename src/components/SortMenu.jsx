@@ -11,7 +11,7 @@ const SortMenu = (props) => {
 return (
     <div>
         <form>
-            <select id="drop-down-2" onChange={(e) => props.onSort(e.target.value)}>
+            <select id="sort-drop" onChange={(e) => props.onSort(e.target.value)}>
             {props.sortOptions.map((mySort) => 
             <option value={mySort} key={mySort}>{mySort}</option>)}
             </select>

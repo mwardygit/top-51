@@ -41,6 +41,19 @@ body {
     padding: 25px 0 35px 0;
     border-bottom: 1px solid darkgray;
 }
+.colorMenuText {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:x-large;
+    font-variant-caps: all-small-caps;
+    color: gold;
+    background-color: #282828;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-align: center;
+    padding: 0px 10px 2px 10px;
+    border: 1px solid darkgray;
+}
+
 #about-text {
     color: rgb(231, 210, 158);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

@@ -31,22 +31,22 @@ const Header = (props) => {
             <h1>Top 51 Artists</h1>
          </div>
          <div id='pulldowns'>
-         <div id='genre-menu'>
-            <h3>filter by genre:
-            <DropMenu
-               onChange={props.onChange}
-               allGenres={props.allGenres}
-            /></h3>
-            <h4>{props.currentMatches}</h4>
-         </div>
-         <div id='sort-menu'>
-            <h3>sort by:
-            <SortMenu
-               onSort={props.onSort}
-               sortOptions={props.sortOptions}
-            /></h3>
-            <h4> </h4>
-         </div>
+            <div id='genre-menu'>
+               <h3>filter by genre:
+               <DropMenu
+                  onChange={props.onChange}
+                  allGenres={props.allGenres}
+               /></h3>
+               <h4>COUNT = {props.currentMatches}</h4>
+            </div>
+            <div id='sort-menu'>
+               <h3>sort by:
+               <SortMenu
+                  onSort={props.onSort}
+                  sortOptions={props.sortOptions}
+               /></h3>
+               <h4> </h4>
+            </div>
          </div>
       </div>
    )

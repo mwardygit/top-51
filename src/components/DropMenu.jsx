@@ -11,7 +11,7 @@ const DropMenu = (props) => {
 return (
       <div>
          <form>
-            <select id="drop-down" onChange={(e) => props.onChange(e.target.value)}>
+            <select id="genre-drop" onChange={(e) => props.onChange(e.target.value)}>
             {props.allGenres.map((genre) => <option value={genre} key={genre}>{genre}</option>)} 
             </select>
          </form>

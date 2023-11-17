@@ -54,7 +54,7 @@ const About = (props) => {
 
             <p id='delay-d2' className='delayed'>Is there a correlation between sales and Grammy awards?</p>
 
-            <p id='delay-e' className='delayed'>Use the 'Genre' menu to filter by music type.</p>
+            <p id='delay-e' className='delayed'>Use the <span className='colorMenuText'>genre:</span> and <span className='colorMenuText'>sort:</span> menus to filter the list.</p>
 
             <p id='delay-f' className='delayed'>Feel free to explore the space!</p>
             <br></br> <br></br>
